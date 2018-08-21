@@ -3,11 +3,11 @@ INSTALL SETUP UBUNTU 16.04:
 
 
 
-apt-get update 
-apt-get dist-upgrade
-dd if=/dev/zero of=/mnt/myswap.swap bs=1M count=4000
-mkswap /mnt/myswap.swap
-swapon /mnt/myswap.swap
+apt-get update;
+apt-get dist-upgrade;
+dd if=/dev/zero of=/mnt/myswap.swap bs=1M count=4000;
+mkswap /mnt/myswap.swap;
+swapon /mnt/myswap.swap;
 
 !!!
 nano /etc/fstab
@@ -18,27 +18,27 @@ Ctrl+O to save, and Ctrl+X to exit the nano editor.
 !!!
 
 
-apt-get install build-essential libtool autotools-dev autoconf pkg-config libssl-dev
-apt-get install libboost-all-dev git npm nodejs nodejs-legacy libminiupnpc-dev redis-server
-add-apt-repository ppa:bitcoin/bitcoin
-apt-get update
-apt-get install libdb4.8-dev libdb4.8++-dev
-curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
-bash install_nvm.sh
-source ~/.profile
-nvm install 0.10.48
-nvm use 0.10.48
-nvm alias default 0.10.48
-nvm use default
+apt-get install build-essential libtool autotools-dev autoconf pkg-config libssl-dev;
+apt-get install libboost-all-dev git npm nodejs nodejs-legacy libminiupnpc-dev redis-server;
+add-apt-repository ppa:bitcoin/bitcoin;
+apt-get update;
+apt-get install libdb4.8-dev libdb4.8++-dev;
+curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh;
+bash install_nvm.sh;
+source ~/.profile;
+nvm install 0.10.48;
+nvm use 0.10.48;
+nvm alias default 0.10.48;
+nvm use default;
 
-sudo apt-get install screen
+sudo apt-get install screen;
 
-screen -S rpc
+screen -S rpc;
 
-git clone https://github.com/FreeDomCrypto-project/FreeDomCrypto.git
+git clone https://github.com/FreeDomCrypto-project/FreeDomCrypto.git;
 
-cd FreeDomCrypto (goto main source link above and setup)
-cd build/release/bin
+cd FreeDomCrypto; (goto main source link above and setup)
+cd build/release/bin;
 ./FreeDomCryptod --allow-local-ip
 Wait for Sync
 ./FreeDomCryptod exit or stop
